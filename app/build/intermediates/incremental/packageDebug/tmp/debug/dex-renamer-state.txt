@@ -1,4 +1,19 @@
-#Sun Oct 07 15:11:38 PDT 2018
-base.0=/annex/Number53/Documents/Teaching/2018_Fall_CS371/lab7/CS371PigGameStarter/app/build/intermediates/transforms/dexMerger/debug/0
+#Mon Feb 25 20:02:25 PST 2019
+path.1=classes.dex
 path.0=classes.dex
+renamed.5=classes6.dex
+renamed.4=classes5.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
 renamed.0=classes.dex
+base.5=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/16
+base.4=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/11
+base.3=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/14
+base.2=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/12
+base.1=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/15
+base.0=/Users/davidcampbell/Desktop/CS371PigDavidAndOlivia/app/build/intermediates/transforms/dexMerger/debug/13
+path.5=classes.dex
+path.4=classes.dex
+path.3=classes.dex
+path.2=classes.dex

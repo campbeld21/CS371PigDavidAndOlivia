@@ -32,6 +32,7 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
     private ImageButton dieImageButton      = null;
     private Button      holdButton          = null;
 
+
     // the android activity that we are running
     private GameMainActivity myActivity;
 
@@ -61,6 +62,41 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
     @Override
     public void receiveInfo(GameInfo info) {
         //TODO You will implement this method to receive state objects from the game
+        if(!(info instanceof PigGameState)){
+            this.flash(Color.RED, 50);
+        }
+        PigGameState gameState = (PigGameState)info;
+
+        if(gameState.getPlayerTurn() == 1){
+            playerScoreTextView.setText("" + gameState.getPlayer1Score());
+            oppScoreTextView.setText("" +gameState.getPlayer0Score());
+        }
+        else if(gameState.getPlayerTurn() == 0){
+            playerScoreTextView.setText("" +gameState.getPlayer0Score());
+            oppScoreTextView.setText("" +gameState.getPlayer1Score());
+
+        }
+        turnTotalTextView.setText("" +gameState.getRunningTotal());
+
+        if(gameState.getCurrentDieValue() == 1) {
+            dieImageButton.setImageResource(R.drawable.face1);
+        }
+        else if(gameState.getCurrentDieValue() == 2) {
+            dieImageButton.setImageResource(R.drawable.face2);
+        }
+        else if(gameState.getCurrentDieValue() == 3) {
+            dieImageButton.setImageResource(R.drawable.face3);
+        }
+        else if(gameState.getCurrentDieValue() == 4) {
+            dieImageButton.setImageResource(R.drawable.face4);
+        }
+        else if(gameState.getCurrentDieValue() == 5) {
+            dieImageButton.setImageResource(R.drawable.face5);
+        }
+        else if(gameState.getCurrentDieValue() == 6) {
+            dieImageButton.setImageResource(R.drawable.face6);
+        }
+
     }//receiveInfo
 
     /**
@@ -72,6 +108,14 @@ public class PigHumanPlayer extends GameHumanPlayer implements OnClickListener {
      */
     public void onClick(View button) {
         //TODO  You will implement this method to send appropriate action objects to the game
+        PigHoldAction holdAction = new PigHoldAction(this);
+        PigRollAction rollAction = new PigRollAction(this);
+        if(button == holdButton){
+            game.sendAction(holdAction);
+        }
+        else if(button == dieImageButton){
+            game.sendAction(rollAction);
+        }
     }// onClick
 
     /**
